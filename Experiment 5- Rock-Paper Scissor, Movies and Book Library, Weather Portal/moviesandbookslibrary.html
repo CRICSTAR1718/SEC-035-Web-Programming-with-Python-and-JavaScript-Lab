@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library</title>
+    <link rel="stylesheet" href="moviesandbooks.css">
+    <style>
+        *{
+    margin:0;
+    padding:0;
+}
+body{
+    height:100%;
+    width:99%;
+    background-image: radial-gradient( circle 341px at 10% 20%,  rgba(132,94,194,1) 0%, rgba(196,243,251,1) 90% );
+    
+    border: solid black 8px;
+}
+#mainhead{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+    height:100%;
+    width:80%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    margin:10px;
+}
+.box2{
+    position:relative;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;;
+}
+.card{
+    border:solid black 2px;
+    background-image: radial-gradient( circle farthest-corner at 3.7% 49.8%,  rgba(143,232,255,1) 21.9%, rgba(209,243,251,1) 52.9% );
+    gap:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.nameAuthor{
+    display: flex;
+    flex-direction: column;
+}
+.author{
+    display:flex;
+}
+.cardfooter{
+    padding:5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid black 1px; */
+    /* border-radius: 20px; */
+    margin: 5px;
+}
+button{
+    height:40px;
+    width: 100px;
+    text-wrap: wrap;
+    border-radius: 5px;
+    margin:5px;
+}
+button a{
+    text-decoration: none;
+    color: black;
+}
+.cardfooter img{
+    border-radius:50%;
+}
+.card img{
+    padding: 0px;
+    width:100%;
+    transition: all 2s 0.5s;
+}
+.card img:hover{
+    transform: scale(1.01);
+}
+
+.card p{
+    padding: 5px;
+}
+.box1 h2{
+    font-size: 50px;
+}
+.box1 p{
+    font-size:20px;
+    text-align: center;
+}
+#tit{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    transition: all 1s 4s;
+}
+#tit :hover{
+    color:rgb(7, 7, 94)
+}
+@media (max-width:700px) 
+{
+    .box2{
+        /* position:relative;
+        display: grid; */
+        grid-template-rows: repeat(4,1fr);
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 10px;
+        padding: 10px;; */
+    }   
+}
+@media (max-width:200px) 
+{
+    .box2{
+        /* position:relative;
+        display: grid; */
+        grid-template-rows: repeat(8,1fr);
+        grid-template-columns: repeat(1, 1fr);
+        /* gap: 10px;
+        padding: 10px;; */
+    }   
+}
+    </style>
+</head>
+<body>
+        <div class="box1">
+        <h2 id="mainhead">Movies and Books</h2>
+        </div>
+        <div class="container">
+            <div class="box1">
+                <h2>Movies</h2>
+                <p>Movies are a popular form of entertainment that combine storytelling, visuals, and sound to create engaging experiences. They come in various genres, such as action, drama, comedy, thriller, and science fiction. Movies can educate, inspire, and evoke emotions, making them a powerful medium for storytelling and cultural expression. With advancements in technology, movies are now available in theaters, on television, and through streaming platforms, making them accessible to a global audience. 🎬✨</p>
+            </div>
+            <div class="box2">
+                <div class="card">
+                    <a href="https://youtu.be/J7vzDh2A9nk?si=rbpn2WAP1BH_9-qW"><img src="golmaalagain.jpeg" alt="golmaalagain" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>Golmaal Again</h3></a>
+                    <p>"Golmaal Again" is a Bollywood comedy film and the fourth installment in the "Golmaal" series. Directed by Rohit Shetty, it features an ensemble cast including Ajay Devgn, Parineeti Chopra, Tabu, Arshad Warsi, and others.</p>
+                    <div class="cardfooter">
+                        <button><a href="https://youtu.be/J7vzDh2A9nk?si=rbpn2WAP1BH_9-qW">Watch Now</a></button>
+                    </div>
+                </div>
+                <div class="card">
+                        <a href="https://www.youtube.com/watch?v=mwVKwP0V7Q4"><img src="airlift.jpeg" alt="airlift" height="200px" width="200px"></a>
+                        <a id="tit" href="#"><h3>Airlift</h3></a>
+                        <p>A 2016 patriotic thriller starring Akshay Kumar and Nimrat Kaur, 'Airlift' depicts India's heroic evacuation mission during the Gulf War, showcasing the courage and resilience of ordinary citizens in extraordinary circumstances</p>
+                        <div class="cardfooter">
+                            <button><a href="https://www.youtube.com/watch?v=mwVKwP0V7Q4">Watch Now</a></button>
+                        </div>
+                </div>
+                <div class="card">
+                    <a href="https://www.youtube.com/watch?v=Cur8R1Tid58"><img src="blank.jpeg" alt="blank" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>Blank</h3></a>
+                    <p>Released in 2019, 'Blank' is an action thriller featuring Sunny Deol. The film centers around a suicide bomber who loses his memory, leading to a tense investigation as authorities race against time to prevent a potential disaster</p>
+                    <div class="cardfooter">
+                        <button><a href="https://www.youtube.com/watch?v=Cur8R1Tid58">Watch Now</a></button>
+                    </div>
+                </div>
+                <div class="card">
+                        <a href="https://www.youtube.com/watch?v=7qSV-RXUKuc"><img src="golmaalagain.jpeg" alt="golmaalagain" height="200px" width="200px"></a>
+                        <a id="tit" href="#"><h3>Hansa</h3></a>
+                        <p>A 2012 independent film directed by Manav Kaul, 'Hansa' is set in a Himalayan village and follows young Hansa and his sister Cheeku as they search for their missing father amidst mounting debts and societal pressures..</p>
+                        <div class="cardfooter">
+                            <button><a href="https://www.youtube.com/watch?v=7qSV-RXUKuc">Watch Now</a></button>
+                        </div>
+                </div>
+                <div class="card">
+                    <a href="https://www.youtube.com/watch?v=WMuMuvew-OU"><img src="striker.jpeg" alt="striker" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>Striker</h3></a>
+                    <p>'Striker' (2010) is an action drama starring Siddharth, portraying the life of Suryakant Sarang, a carrom player navigating challenges in the underbelly of Mumbai during the late 1980s and early 1990s</p>
+                    <div class="cardfooter">
+                        <button><a href="https://www.youtube.com/watch?v=WMuMuvew-OU">Watch Now</a></button>
+                    </div>
+                </div>
+                <div class="card">
+                        <a href="https://www.youtube.com/watch?v=example_link"><img src="love you hamesha.jpeg" alt="golmaalagain" height="200px" width="200px"></a>
+                        <a id="tit" href="#"><h3>Love You Hamesha</h3></a>
+                        <p>A 1999 romantic film featuring Akshaye Khanna and Sonali Bendre, 'Love You Hamesha' explores the journey of young love and the challenges faced by a couple striving to be together against societal odds.</p>
+                        <div class="cardfooter">
+                            <button><a href="https://www.youtube.com/watch?v=example_link">Watch Now</a></button>
+                        </div>
+                </div>
+                <div class="card">
+                    <a href="https://www.youtube.com/watch?v=example_link"><img src="nirahuahindustani.jpeg" alt="nirahuahindustani" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>Nirahua Hindustani</h3></a>
+                    <p>A 2014 Bhojpuri-language action-romance-comedy film starring Dinesh Lal Yadav and Amrapali Dubey, 'Nirahua Hindustani' depicts a villager's adventures in Mumbai as he navigates love and challenges in the big city.</p>
+                    <div class="cardfooter">
+                        <button><a href="https://www.youtube.com/watch?v=example_link">Watch Now</a></button>
+                    </div>
+                </div>
+                <div class="card">
+                        <a href="https://www.youtube.com/watch?v=example_link"><img src="amarjyoti.jpeg" alt="amarjyoti" height="200px" width="200px"></a>
+                        <a id="tit" href="#"><h3>Amar Jyoti</h3></a>
+                        <p>A 1936 classic directed by V. Shantaram, 'Amar Jyoti' features Durga Khote as a rebellious female pirate challenging societal norms and fighting for justice in a patriarchal society. </p>
+                        <div class="cardfooter">
+                            <button><a href="https://www.youtube.com/watch?v=example_link">Watch Now</a></button>
+                        </div>
+                </div> 
+        </div>
+        </div>  
+
+        <div class="container">
+            <div class="box1">
+                <h2>Books</h2>
+                <p>Books are a primary source of knowledge, entertainment, and inspiration. They come in various genres, including fiction, non-fiction, biographies, self-help, and academic texts. Books help expand vocabulary, improve critical thinking, and enhance imagination. With the rise of technology, books are available in digital formats (eBooks) and audiobooks, making reading more accessible. Whether for learning or leisure, books play a crucial role in personal and intellectual growth. 📚✨</p>
+            </div>
+            <div class="box2">
+                <div class="card">
+                    <a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html"><img src="ADA 95.jpg" alt="golmaalagain" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>ADA 95</h3></a>
+                    <p>Ada is a language of special value in the development of large programs which must work reliably. This document introduces Ada 95, which increases the flexibility of Ada making it applicable to wider domains but retains the inherent reliability.</p>
+                    <div class="cardfooter">
+                        <button><a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html">Read Now</a></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html"><img src="ADA 95.jpg" alt="golmaalagain" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>ADA 95</h3></a>
+                    <p>Ada is a language of special value in the development of large programs which must work reliably. This document introduces Ada 95, which increases the flexibility of Ada making it applicable to wider domains but retains the inherent reliability.</p>
+                    <div class="cardfooter">
+                        <button><a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html">Read Now</a></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html"><img src="ADA 95.jpg" alt="golmaalagain" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>ADA 95</h3></a>
+                    <p>Ada is a language of special value in the development of large programs which must work reliably. This document introduces Ada 95, which increases the flexibility of Ada making it applicable to wider domains but retains the inherent reliability.</p>
+                    <div class="cardfooter">
+                        <button><a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html">Read Now</a></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html"><img src="ADA 95.jpg" alt="golmaalagain" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>ADA 95</h3></a>
+                    <p>Ada is a language of special value in the development of large programs which must work reliably. This document introduces Ada 95, which increases the flexibility of Ada making it applicable to wider domains but retains the inherent reliability.</p>
+                    <div class="cardfooter">
+                        <button><a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html">Read Now</a></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html"><img src="ADA 95.jpg" alt="golmaalagain" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>ADA 95</h3></a>
+                    <p>Ada is a language of special value in the development of large programs which must work reliably. This document introduces Ada 95, which increases the flexibility of Ada making it applicable to wider domains but retains the inherent reliability.</p>
+                    <div class="cardfooter">
+                        <button><a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html">Read Now</a></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html"><img src="ADA 95.jpg" alt="golmaalagain" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>ADA 95</h3></a>
+                    <p>Ada is a language of special value in the development of large programs which must work reliably. This document introduces Ada 95, which increases the flexibility of Ada making it applicable to wider domains but retains the inherent reliability.</p>
+                    <div class="cardfooter">
+                        <button><a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html">Read Now</a></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html"><img src="ADA 95.jpg" alt="golmaalagain" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>ADA 95</h3></a>
+                    <p>Ada is a language of special value in the development of large programs which must work reliably. This document introduces Ada 95, which increases the flexibility of Ada making it applicable to wider domains but retains the inherent reliability.</p>
+                    <div class="cardfooter">
+                        <button><a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html">Read Now</a></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html"><img src="ADA 95.jpg" alt="golmaalagain" height="200px" width="200px"></a>
+                    <a id="tit" href="#"><h3>ADA 95</h3></a>
+                    <p>Ada is a language of special value in the development of large programs which must work reliably. This document introduces Ada 95, which increases the flexibility of Ada making it applicable to wider domains but retains the inherent reliability.</p>
+                    <div class="cardfooter">
+                        <button><a href="http://www.seas.gwu.edu/~adagroup/sigada-website/barnes-html/intro.html">Read Now</a></button>
+                    </div>
+                </div>
+
+             </div>   
+        </div> 
+</body>
+</html>

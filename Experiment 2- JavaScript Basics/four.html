@@ -1,0 +1,44 @@
+<!--  A program to find number of occurences of character in the string -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+            <h2>String Operations</h2>
+            <label for="inputString">Enter a String:</label>
+            <input type="text" id="inputString" placeholder="Type a string here"> 
+            <br>
+            <br>
+            <label for="charToFind">Character to Count:</label>
+            <input type="text" id="charToFind" maxlength="1" placeholder="e.g., a">
+            <br><br>
+            <button onclick="processString()">Check</button>
+            <h3>Results:</h3>
+            <p id="charCount"></p>
+    <script>
+        function countCharacterOccurrences(str, char) {
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+        if (str[i] === char) {
+            count++;
+        }
+        }
+        return count;
+        }
+        function processString() {
+            let inputStr = document.getElementById("inputString").value;
+            let charToFind = document.getElementById("charToFind").value;
+            // Character Occurrences
+            if (charToFind) {
+                document.getElementById("charCount").innerText = `The character '${charToFind}' appears ${countCharacterOccurrences(inputStr, charToFind)} times.`;
+            } else {
+                document.getElementById("charCount").innerText = "Please enter a character to count.";
+            }
+        }
+    </script>
+    
+  </body>
+  </html>

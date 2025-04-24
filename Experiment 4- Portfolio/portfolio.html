@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Project</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+            font-family: Arial, sans-serif;
+            transition: background 0.5s;
+
+        }
+        .dark-mode {
+            background: linear-gradient(62deg, #1e1e1e 0%, #3a3a3a 100%);
+            color: white;
+        }
+        .container {
+            max-width:100%;
+            margin: auto;
+            padding: 20px;
+            margin: 10px;
+        }
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
+        }
+        .nav button, .toggle-dark {
+            background-color: rgb(80, 80, 160);
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .nav button:hover, .toggle-dark:hover {
+            background-color: rgb(50, 50, 120);
+        }
+        .bookmark a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .bookmark a:hover {
+            color: yellow;
+        }
+        img {
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        #name{
+            padding: 5px;;
+           font-family: 'Times New Roman', Times, serif;
+           font-size: 30px;
+           border: solid purple 2px;
+           
+        }
+        #About{
+            text-align: justify;
+        }
+        #aboutimg{
+            display: flex;
+            align-self:self-start;
+        }
+        #projects a{
+            text-decoration: none;
+            color: #3a3a3a;
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <div id="name"><span>Adeela Azeez</span></div>
+        <nav class="nav">
+            <button onclick="scrollToSection('about')">About</button>
+            <button onclick="scrollToSection('skills')">Skills</button>
+            <button onclick="scrollToSection('projects')">Projects</button>
+            <button class="toggle-dark" onclick="toggleDarkMode()">Dark Mode</button>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <table>
+                <tr>
+                    <td><img src="Picture.jpeg" alt="Myself" height="200" width="200" id="aboutimg"></td>
+                    <td id="About">I aspire to become a full-stack software developer because I am deeply passionate about crafting solutions that bridge the gap between user experience and technical functionality. I find immense satisfaction in building applications that are not only visually appealing but also efficient, scalable, and capable of solving real-world problems. I want to work on projects that seamlessly integrate the frontend and backend, ensuring that every aspect of the application contributes to a smooth and enjoyable user experience.My ultimate dream is to create innovative software solutions that have a meaningful impact, particularly in the fields of business and education. I envision developing tools like management platforms, e-learning applications, and task management systems that empower users, simplify workflows, and enhance productivity. I want to design and implement features such as personalized learning paths, intuitive user interfaces, and robust backend systems that adapt to the evolving needs of users.I see myself constantly learning and evolving in this field, staying updated with the latest technologies and best practices to deliver high-quality solutions. Whether it's using frameworks like React.js and Vue.js for the frontend or leveraging Node.js or Python for backend development, I am excited about building comprehensive applications from scratch. My ultimate goal is to combine creativity, technical expertise, and innovation to leave a lasting impact through the software I create.</td>
+                </tr>
+            </table>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Artificial Intelligence</li>
+                <li>UI/UX Design</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Here are some of my projects...</p>
+            <ul>
+                <li><a href="../Experiment 1/homepage.html">The Family Restaurant</a></li>
+                <li><a href="studysyncclass.html"> StudySyn</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li>The Lucknow Public Collegiate</li>
+                <li>K.R. Mangalam University</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Work Experience</h2>
+            <ul>
+                <li>Intern, Edunet Foundation (June 2024 - July 2024)</li>
+                <li>Intern, Codsft (May 2024 - June 2024)</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li>Artificial Intelligence Fundamentals</li>
+                <li>Google UX Design Professional Certificate</li>
+                <li>Enterprise-Grade AI & Data Science</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" id="nameInput" placeholder="Your Name" required>
+                <input type="email" id="emailInput" placeholder="Your Email" required>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="formMessage"></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; Adeela Azeez, All rights reserved</p>
+    </footer>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({behavior: "smooth"});
+        }
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("formMessage").innerText = "Thank you for reaching out!";
+        });
+    </script>
+</body>
+</html>
