@@ -1,0 +1,35 @@
+<!-- Create a js countdown timer that triggers an event when th etimer reaches zero -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <div id="countdownDisplay" style="font-size: 24px; font-weight: bold;"></div>
+    <script>
+        function startCountdown(durationInSeconds, displayElement) {
+        let timeLeft = durationInSeconds;
+        const countdownInterval = setInterval(function () {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+        displayElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        if (timeLeft <= 0) {
+            clearInterval(countdownInterval);
+            triggerEvent(); 
+        }
+        timeLeft--; 
+        }, 1000); 
+        }
+        function triggerEvent() {
+        alert("Time's up!"); 
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+        const display = document.getElementById("countdownDisplay");
+        startCountdown(20, display);
+           });
+
+    </script>
+ </body>
+ </html>

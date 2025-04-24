@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .panel {
+            width: 40%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        input {
+            padding: 10px;
+            width: 60%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            margin: 8px 0;
+            background: #f1f1f1;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .delete-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>To-Do List</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button onclick="addTask()">Add Task</button>
+
+    <div class="container">
+        <!-- Left Panel: Completed Tasks -->
+        <div class="panel">
+            <h2>✅ Completed Tasks</h2>
+            <ul id="completedTasks"></ul>
+        </div>
+
+        <!-- Right Panel: Pending Tasks -->
+        <div class="panel">
+            <h2>⏳ Pending Tasks</h2>
+            <ul id="pendingTasks"></ul>
+        </div>
+    </div>
+
+    <script>
+        function addTask() {
+            let taskInput = document.getElementById("taskInput");
+            let taskText = taskInput.value.trim();
+            if (!taskText) {
+                alert("Please enter a task!");
+                return;
+            }
+
+            let li = document.createElement("li");
+            li.innerHTML = `${taskText} <button class="delete-btn" onclick="deleteTask(this)">X</button>`;
+            li.addEventListener('click', () => moveToCompleted(li));
+            document.getElementById("pendingTasks").appendChild(li);
+            taskInput.value = ""; 
+        }
+        function moveToCompleted(taskItem) {
+            taskItem.remove(); 
+            taskItem.removeEventListener('click', () => moveToCompleted(taskItem)); 
+            document.getElementById("completedTasks").appendChild(taskItem);
+        }
+        function deleteTask(button) {
+            button.parentElement.remove(); 
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    height:100%;
+    width:99%;
+    background-image: radial-gradient( circle 341px at 10% 20%,  rgba(132,94,194,1) 0%, rgba(196,243,251,1) 90% );
+    
+    border: solid black 8px;
+}
+#mainhead{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+    height:100%;
+    width:80%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    margin:10px;
+}
+.box2{
+    position:relative;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;;
+}
+.card{
+    border:solid black 2px;
+    background-image: radial-gradient( circle farthest-corner at 3.7% 49.8%,  rgba(143,232,255,1) 21.9%, rgba(209,243,251,1) 52.9% );
+    gap:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.nameAuthor{
+    display: flex;
+    flex-direction: column;
+}
+.author{
+    display:flex;
+}
+.cardfooter{
+    padding:5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid black 1px; */
+    /* border-radius: 20px; */
+    margin: 5px;
+}
+button{
+    height:40px;
+    width: 100px;
+    text-wrap: wrap;
+    border-radius: 5px;
+    margin:5px;
+}
+button a{
+    text-decoration: none;
+    color: black;
+}
+.cardfooter img{
+    border-radius:50%;
+}
+.card img{
+    padding: 0px;
+    width:100%;
+    transition: all 2s 0.5s;
+}
+.card img:hover{
+    transform: scale(1.01);
+}
+
+.card p{
+    padding: 5px;
+}
+.box1 h2{
+    font-size: 50px;
+}
+.box1 p{
+    font-size:20px;
+    text-align: center;
+}
+#tit{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    transition: all 1s 4s;
+}
+#tit :hover{
+    color:rgb(7, 7, 94)
+}
+@media (max-width:700px) 
+{
+    .box2{
+        /* position:relative;
+        display: grid; */
+        grid-template-rows: repeat(4,1fr);
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 10px;
+        padding: 10px;; */
+    }   
+}
+@media (max-width:200px) 
+{
+    .box2{
+        /* position:relative;
+        display: grid; */
+        grid-template-rows: repeat(8,1fr);
+        grid-template-columns: repeat(1, 1fr);
+        /* gap: 10px;
+        padding: 10px;; */
+    }   
+}
+

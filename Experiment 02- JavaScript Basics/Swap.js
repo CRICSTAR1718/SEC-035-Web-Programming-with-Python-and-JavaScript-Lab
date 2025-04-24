@@ -1,0 +1,10 @@
+let t;
+let num1=20;
+let num2=30;
+console.log(`before swap num1= ${num1}`);
+console.log(`before swap num2= ${num2}`);
+t=num1;
+num1=num2;
+num2=t;
+console.log(`after swap a= ${num1}`);
+console.log(`after swap a= ${num2}`);
