@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+            margin: 20px;
+            transition: all 0.5s ease;
+        }
+        .hidden {
+            display: none;
+        }
+        .highlight {
+            border: 3px dashed red;
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="myBox" class="box">Hello</div>
+    <button onclick="changeContent()">Change Content</button>
+    <button onclick="toggleVisibility()">Toggle Visibility</button>
+    <button onclick="createNewElement()">Add New Element</button>
+
+    <script>
+        function changeContent() {
+            let box = document.getElementById("myBox");
+            box.innerHTML = "Text Changed!";
+            box.style.color = "white";
+            box.style.backgroundColor = "blue";
+            box.style.fontSize = "25px";
+            box.style.border = "2px solid black";
+        }
+
+        function toggleVisibility() {
+            let box = document.getElementById("myBox");
+            box.classList.toggle("hidden");
+        }
+        function createNewElement() {
+            let newElement = document.createElement("div");
+            newElement.innerHTML = "New Element";
+            newElement.classList.add("box");
+            document.body.appendChild(newElement);
+        }
+    </script>
+
+</body>
+</html>

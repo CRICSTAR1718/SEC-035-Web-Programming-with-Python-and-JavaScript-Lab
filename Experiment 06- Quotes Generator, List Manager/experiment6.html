@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop and Array Example</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #ddd;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Number Filtering Using Loops and Arrays</h2>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button onclick="generateNumbers()">Generate</button>
+        <h3>Even Numbers:</h3>
+        <ul id="evenNumbersList"></ul>
+    </div>
+    <script>
+        function generateNumbers() {
+    let inputNumber = parseInt(document.getElementById("numberInput").value);
+    let numbersArray = [];
+
+    // Using a for loop to fill the array
+    for (let i = 1; i <= inputNumber; i++) {
+        numbersArray.push(i);
+    }
+
+    let evenNumbers = [];
+    
+    // Using a for loop with if condition
+    for (let i = 0; i < numbersArray.length; i++) {
+        if (numbersArray[i] % 2 === 0) {
+            evenNumbers.push(numbersArray[i]);
+        }
+    }
+
+    let listElement = document.getElementById("evenNumbersList");
+    listElement.innerHTML = ""; // Clear previous list
+
+    let index = 0;
+    // Using a while loop to display even numbers
+    while (index < evenNumbers.length) {
+        let listItem = document.createElement("li");
+        listItem.textContent = evenNumbers[index];
+        listElement.appendChild(listItem);
+        index++;
+    }
+}
+    </script>
+</body>
+</html>
